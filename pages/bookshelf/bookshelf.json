@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "categories":"../../components/categories/categories",
+    "ranking": "../../components/ranking/ranking"
+  }
+}

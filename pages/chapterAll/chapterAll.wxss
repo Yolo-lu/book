@@ -1,0 +1,7 @@
+.all{
+  width: 90%;
+  margin: auto
+}
+.list{
+  padding: 20rpx
+}

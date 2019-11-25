@@ -1,0 +1,52 @@
+.content{
+  display: flex;
+  margin-top: 40rpx;
+  border-bottom: 2rpx solid #f4f4f4
+}
+.manu{
+  flex: 1;
+  margin: auto;
+  font-size: 34rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  padding-bottom: 10rpx;
+  color: #666
+}
+.center{
+text-align: center;
+margin: auto;
+width: 100rpx;
+}
+.left1{
+  border-bottom: 4rpx solid #cb1c36;
+  color: #cb1c36
+}
+.book{
+  display: flex;
+  margin:30rpx ;
+   border-bottom: 1px solid #f3f3f3;
+}
+.icon image{
+  width: 200rpx;
+  height: 280rpx
+}
+.infos{
+  margin-left: 20rpx
+}
+.infos .titles{
+  font-weight: bold;
+}
+.infos .author{
+  color: #666;
+  margin: 10rpx 0;
+  font-size: 28rpx
+}
+.infos .authors{
+   color: #666;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: wrap;
+  width: 450rpx;
+  height: 122rpx;
+  font-size: 28rpx
+}

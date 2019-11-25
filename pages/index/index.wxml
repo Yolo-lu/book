@@ -1,0 +1,23 @@
+<view class="head">
+<view class="left" wx:if="{{!flag}}" bindtap="edit"><image src="../../images/完成.png"></image></view>
+<view class="left" wx:if="{{flag}}" bindtap="edit"><image src="../../images/编辑.png" ></image></view>
+<view class="right">
+<view class="help" bindtap="help">帮助</view>
+<image src="../../images/刷新.png" class="new"></image></view>
+</view>
+<view class="contanier" wx:if="{{!bookshelf.length}}">
+主人还没有收藏书籍哦，请去书城收藏吧！
+</view>
+<view wx:if="{{bookshelf.length}}">
+  <view class="relative">
+        <view class="relativeBook" wx:for="{{bookshelf}}" wx:key="{{index}}">
+        <view class="relativeRcommend" bindtap="content" data-item="{{item}}">
+        <view class="icon" wx:if="{{flag}}" catchtap="clear" data-index="{{index}}"><image src="../../images/删除.png"></image></view>
+        <view ><image src='{{"https://statics.zhuishushenqi.com"+item.cover}}'class="recommendCover" lazy-load></image></view>
+        <view class="chaptersCount">{{item.title}}</view>
+        <view wx:if="{{item.chaptertitle}}" class="lastRead">读到{{item.chaptertitle}}</view>
+       <view wx:else class="lastRead">读到第一章</view>
+        </view>
+        </view>
+      </view>
+</view>

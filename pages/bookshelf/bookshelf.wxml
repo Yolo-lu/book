@@ -1,0 +1,21 @@
+<view class="head">
+  <view class="left" bindtap="category">
+    <view class="center {{active===0?'left1':''}}">分类</view>
+  </view>
+  <view class="right " bindtap="ranking">
+    <view class=" center {{active===1?'left1':''}}">排行</view>
+  </view>
+</view>
+<view wx:if="{{active===0}}">
+  <view class="title">男生</view>
+  <categories info="{{info.male}}" classfy="male"></categories>
+  <view class="title">女生</view>
+  <categories info="{{info.female}}" classfy="female"></categories>
+  <view class="title">出版</view>
+  <categories info="{{info.press}}" classfy="press"></categories>
+</view>
+<view wx:if="{{active===1}}">
+<view class="title" >男生</view>
+<ranking rank="{{rank.male}}"></ranking>
+<view class="title">女生</view>
+<ranking rank="{{rank.female}}"></ranking></view>

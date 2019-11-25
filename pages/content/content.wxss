@@ -1,0 +1,188 @@
+.icon .headcover{
+  width: 260rpx;
+  height: 340rpx;
+  display: block;
+  margin: auto;
+  box-shadow: 6rpx 4rpx 4rpx #999;
+}
+.icon{
+  padding-top: 20rpx;
+  height: 140rpx;
+  width: 100%;
+  background: #cb1c36
+}
+.title{
+  text-align: center;
+  margin: 20rpx 0;
+  font-weight: bold
+}
+.author{
+  text-align: center;
+  color: #999;
+  font-size: 28rpx
+}
+.row{
+  display: flex;
+  margin: 20rpx 100rpx;
+  justify-content: space-around
+}
+.read{
+  border: 2rpx solid #999;
+  padding: 20rpx 40rpx;
+  border-radius: 40rpx;
+}
+.color{
+  background: #cb1c36;
+  color: #fff;
+}
+.score{
+  display: flex;
+  margin: 20rpx
+}
+.star image{
+  width: 32rpx;
+  height: 32rpx;
+  display: block
+}
+.level{
+ width: 100%;
+ display: flex;
+ justify-content: center;
+}
+.lastChapter{
+  text-align: center;
+  font-size: 26rpx
+}
+.lastChapter .right{
+  color: rgb(8, 172, 248)
+}
+.content{
+  display: flex;
+  margin-top: 40rpx;
+  border-bottom: 2rpx solid #f4f4f4
+}
+.left1,.right1{
+  flex: 1;
+  margin: auto;
+  font-size: 34rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  padding-bottom: 10rpx;
+  color: #666
+}
+.center{
+text-align: center;
+margin: auto;
+width: 100rpx;
+}
+.centers{
+text-align: center;
+margin: auto;
+width: 160rpx;
+}
+.left2{
+  border-bottom: 4rpx solid #cb1c36;
+  color: #cb1c36
+}
+.details{
+margin: 20rpx 0;
+font-size: 28rpx
+}
+.person{
+  margin: 20rpx 40rpx;
+  display: flex
+}
+.avatar{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%
+}
+.user{
+  margin: 15rpx 30rpx;
+  flex: 1
+}
+.nickname{
+  color: rgba(230, 130, 17, 0.849);
+  margin-bottom: 10rpx
+}
+.contents{
+  font-size: 28rpx;
+  color: #666
+}
+.manu{
+  display: flex;
+  justify-content: center;
+  height: 50rpx;
+  background: #f4f4f4;
+  margin: auto;
+  line-height: 50rpx
+}
+.manu .img{
+  width: 32rpx;
+  height: 32rpx
+}
+.chaptersCount{
+  font-size: 28rpx;
+  color: #666;
+  text-align: center
+}
+.other{
+  display: flex;
+  justify-content: space-between;
+  font-size: 30rpx;
+  margin: auto;
+  padding-top: 40rpx
+}
+.right3{
+ color: rgba(230, 130, 17, 0.849);
+ display: flex
+}
+.new{
+  width: 32rpx;
+  height: 32rpx;
+  position: relative;
+  top: 6rpx;
+  right: 10rpx
+}
+.all{
+  width: 90%;
+  margin: auto
+}
+.relative{
+   display: flex;
+   justify-content: space-around;
+}
+.relativeRcommend{ 
+  margin: 20rpx
+}
+.recommendCover{
+  width: 200rpx;
+  height: 250rpx;
+  display: block;
+  margin-bottom: 10rpx
+}
+
+.mask{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    z-index: 9000;
+    opacity: 0.7;
+}
+ 
+.modalDlg{
+    width: 100%;
+    height: 900rpx;
+    position: fixed;
+    top: 13%;
+  
+    z-index: 9999;
+}
+.headcovers{
+  width: 100%;
+  height: 100%;
+  display: block;
+}

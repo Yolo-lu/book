@@ -1,0 +1,17 @@
+/* pages/help/help.wxss */
+.head{
+  font-size: 40rpx;
+  font-weight: bold;
+  margin: 20rpx
+}
+.question{
+  margin-left: 20rpx;
+  font-size: 36rpx;
+  color: #333;
+}
+.content{
+  margin: 20rpx;
+  color: #666;
+  text-indent: 2em;
+  line-height: 60rpx
+}

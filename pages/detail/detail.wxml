@@ -1,0 +1,31 @@
+<view class="title">
+  <view wx:for="{{typeList}}" wx:key="{{index}}">
+    <view class="name {{type===item.id?'style':''}}" bindtap="choosetype" data-item="{{item.id}}">{{item.name}}</view>
+  </view>
+</view>
+<scroll-view scroll-x="true" class="head">
+  <view class="names {{''===minor?'style':''}}" bindtap="chooseminor" data-item="{{item===''}}">全部</view>
+  <view wx:for="{{mins}}" wx:key="{{index}}" class="names">
+    <view bindtap="chooseminor" data-item="{{item}}" class="{{minor===item?'style':''}}">{{item}}</view>
+  </view>
+</scroll-view>
+<view>
+  <view wx:for="{{books}}" wx:key="{{index}}">
+    <view class="book" bindtap="content" data-item="{{item._id}}">
+    <view class="icon">
+      <image src='{{"https://statics.zhuishushenqi.com"+item.cover}}' lazy-load></image>
+    </view>
+    <view class="right">
+      <view class="titles">{{item.title}}</view>
+      <view class="author">{{item.author}}</view>
+      <view class="authors">{{item.shortIntro}}</view>
+      <view class="tags">
+        <view wx:for="{{item.tags}}" wx:for-item="items" wx:for-index="indexs" wx:key="{{indexs}}">
+          <view wx:if="{{indexs<3}}" class="tag {{indexs===1?'color':''}}{{indexs===2?'back':''}}">{{items}}</view>
+        </view>
+      </view>
+    </view>
+    </view>
+  </view>
+  <view class="footer" wx:if="{{length<limit}}">已加载全部</view>
+</view>

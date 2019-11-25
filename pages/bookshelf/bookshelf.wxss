@@ -1,0 +1,22 @@
+.head{
+  display: flex
+}
+.left,.right{
+  flex: 1;
+  margin: auto;
+  font-size: 34rpx;
+  height: 70rpx;
+  line-height: 70rpx
+}
+.center{
+text-align: center;
+margin: auto;
+width: 100rpx;
+}
+.left1{
+  border-bottom: 4rpx solid #cb1c36;
+}
+.title{
+  color: #999;
+  margin: 20rpx
+}

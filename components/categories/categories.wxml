@@ -1,0 +1,8 @@
+<view class="list">
+  <view wx:for="{{info}}" wx:key="{{index}}" class="noval">
+    <view bindtap="detail" data-item="{{item.name}}">
+      <view class="name">{{item.name}}</view>
+      <view class="sum">{{item.bookCount}}本</view>
+    </view>
+  </view>
+</view>

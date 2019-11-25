@@ -1,0 +1,10 @@
+<view wx:for="{{rank}}" wx:key="{{index}}">
+  <view wx:if="{{index<6}}">
+    <view class="rank" bindtap="ranking" data-item="{{item}}">
+      <view class="icon">
+        <image src='{{"https://statics.zhuishushenqi.com"+item.cover}}'></image>
+      </view>
+      <view class="title">{{item.title}}</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,21 @@
+.list{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  border-top: 1px solid #e2e2e2;
+}
+.noval{
+  width: 33%;
+  border-bottom: 1px solid #e2e2e2;
+  border-right: 1px solid #e2e2e2;
+  text-align: center;
+  padding: 20rpx 0;
+}
+.name{
+font-size: 32rpx;
+padding-top: 10rpx
+}
+.sum{
+  font-size: 30rpx;
+  color: #666;
+}

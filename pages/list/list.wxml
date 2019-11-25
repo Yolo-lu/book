@@ -1,0 +1,24 @@
+<view class="content" wx:if="{{item.monthRank}}">
+  <view class="manu" bindtap="left" >
+    <view class="center {{active===0?'left1':''}}">周榜</view>
+  </view>
+  <view class="manu" bindtap="center">
+    <view class=" center {{active===1?'left1':''}}">月榜</view>
+  </view>
+  <view class="manu" bindtap="right">
+    <view class=" center {{active===2?'left1':''}}">总榜</view>
+  </view>
+</view>
+  <view wx:for="{{info.books}}" wx:key="{{index}}">
+    <view class="book" bindtap="content" data-item="{{item._id}}">
+      <view class="icon">
+        <image src='{{"https://statics.zhuishushenqi.com"+item.cover}}' lazy-load></image>
+      </view>
+      <view class="infos">
+        <view class="titles">{{item.title}}</view>
+        <view class="author">{{item.author}}</view>
+        <view class="authors">{{item.shortIntro}}</view>
+      </view>
+    </view>
+  </view>
+  

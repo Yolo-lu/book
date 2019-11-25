@@ -1,0 +1,84 @@
+<view class="icon">
+
+<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}" bindtap="go"></view>
+<view class="modalDlg" wx:if="{{showModal}}" bindtap="go">
+     <image class='headcovers' src='{{"https://statics.zhuishushenqi.com"+info.cover}}' bindlongpress="handleLongPress" ></image>
+</view>
+
+
+  <image class='headcover' src='{{"https://statics.zhuishushenqi.com"+info.cover}}' lazy-load bindtap="submit"></image>
+  <view class="title">{{info.title}}</view>
+  <view class="author">{{info.author}}</view>
+  <view class="row">
+    <view class="read {{active===0?'color':''}}" bindtap="onread">
+      <view>开始阅读</view>
+    </view>
+    <view class="read {{active===1?'color':''}}">
+      <view wx:if="{{addFlag}}"  bindtap="add" data-item="{{info}}">加入书架</view>
+      <view wx:else>已加入书架</view>
+    </view>
+  </view>
+  <view class="level">
+    <view class="score">
+      <view class="star" wx:for="{{star}}" wx:key="{{index}}">
+        <image src="../../images/star.png"></image>
+      </view>
+      <view class="star" wx:for="{{5-star}}" wx:key="{{index}}">
+        <image src="../../images/星星.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="lastChapter">
+    <text class="left">更新至</text>
+    <text class="right">{{info.lastChapter}}</text>
+  </view>
+  <view class="content">
+    <view class="left1" bindtap="left">
+      <view class="center {{actives===2?'left2':''}}">详情</view>
+    </view>
+    <view class="right1 " bindtap="right">
+      <view class=" centers {{actives===3?'left2':''}}">评论({{evaluate.total}})</view>
+    </view>
+  </view>
+  <view wx:if="{{actives===2}}">
+    <scroll-view scroll-y="true" class="all" style="height: 620rpx;">
+      <view class="details">简介：{{info.longIntro}}</view>
+      <view class="manu">
+        <view>
+          <image class="img" src="../../images/目录.png"></image>
+        </view>
+        <view class="chaptersCount" bindtap="chapter">总目录({{info.chaptersCount}})</view>
+      </view>
+      <view class="other">
+        <view class="left3">看过这本书的人还在看</view>
+        <view class="right3">
+          <view>
+            <image class="new" src="../../images/new.png"></image>
+          </view>
+          <view bindtap="change">换一换</view>
+        </view>
+      </view>
+      <view class="relative">
+        <view class="relativeBook" wx:for="{{recommend}}" wx:key="{{index}}">
+        <view wx:if="{{index<3}}" class="relativeRcommend" bindtap="content" data-item="{{item._id}}">
+        <view><image src='{{"https://statics.zhuishushenqi.com"+item.cover}}'class="recommendCover" lazy-load></image></view>
+        <view class="chaptersCount">{{item.title}}</view>
+        </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view wx:if="{{actives===3}}">
+    <scroll-view scroll-y="true" style="height: 620rpx;" class="evaluation" >
+      <view class="person" wx:for="{{evaluate.docs}}" wx:key="{{index}}">
+        <image class='avatar' src='{{"https://statics.zhuishushenqi.com"+item.author.avatar}}'></image>
+        <view class="user">
+          <view class="nickname">{{item.author.nickname}}</view>
+          <view class="contents">{{item.content}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+
+
